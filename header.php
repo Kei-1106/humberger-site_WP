@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="langulage_attributes();">
+<html lang="<?php language_attributes();?>"><!--言語設定を自動的に出力-->
 <head>
     <meta charset="UTF-8">
     <title>ハンバーガーサイト</title>
@@ -25,16 +25,10 @@
         <div class="u-display">
             <header class="l-header c-background-color__orange-light">
                     <h1 class="c-logo u-align">
-                        <a href="#">Hamburger</a>
+                        <a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a><!--サイトのタイトルを取得-->
                     </h1>
                     <div class="u-display__flex--center"></div>
-                <form action="archive-search.html" method="get" class="l-header__search p-search-box u-display__flex--right">
-                    <div class="p-search-box__inner">
-                        <div class="p-search-box__inner--icon c-icon"></div>
-                        <input type="text" class="p-search-box__inner--text c-search" value="" name="search" title="検索" placeholder="">
-                    </div>
-                    <input type="submit" name="submit" value="検索" class="c-search--button c-background-color__orange-verylight">
-                </form>
+                    <?php get_search_form(); ?>
                 <div class="l-header__hamburger c-button__hamburger js-hamburger">
                     <span></span>
                     <span>Menu</span>

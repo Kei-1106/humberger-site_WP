@@ -2,7 +2,7 @@
             <?php get_header(); ?>
             <main>
                 <div class="p-home p-home__mainvisual c-background-color__black">
-                    <div class="p-home__title c-title--site">ダミーサイト</div>
+                    <div class="p-home__title c-title--site"><?php bloginfo('description');?></div><!--サイトのキャッチフレーズを取得-->
                 </div>
                 <div class="l-main">
                     <div class="p-content u-display__flex u-gap u-display__column">
