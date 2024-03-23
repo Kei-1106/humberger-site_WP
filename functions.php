@@ -13,7 +13,7 @@
         }
         return $title;
     }
-    add_filter('pre_get_document_title', 'hamburger_site_WP_title');
+    add_filter('pre_get_document_title', 'hamburger_site_title');
 
 
     function hamburger_site_WP_script(){

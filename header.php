@@ -8,8 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale">
     <link rel="shortcut icon" href="<?php echo get_template_directory_url(); ?>/img/favicon.ico">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    <script src="js/main.js"></script>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
