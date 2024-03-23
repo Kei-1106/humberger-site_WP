@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <?php wp_head(); ?>
 </head>
-<body >
+<body <?php body_class(); ?>>
     <div class="u-display__flex u-position">
         <div class="u-display">
             <header class="l-header c-background-color__orange-light">
