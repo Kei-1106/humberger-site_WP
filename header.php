@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
     <div class="u-display__flex u-position">
