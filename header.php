@@ -8,8 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale">
     <link rel="shortcut icon" href="<?php echo esc_url(get_template_directory_uri()); ?>/img/favicon.ico">
     <link rel="stylesheet" href="https://ajax.googleapis.com">
-    <link href="https://use.fontawesome.com/releases/v6.1.2/css/all.css" rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
