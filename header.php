@@ -8,8 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale">
     <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="stylesheet" href="https://ajax.googleapis.com">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="scss/style.scss">
     <link href="https://use.fontawesome.com/releases/v6.1.2/css/all.css" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
