@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    <script src="js/main.js"></script>
 </head>
 <body <?php body_class(); ?>>
     <div class="u-display__flex u-position">
