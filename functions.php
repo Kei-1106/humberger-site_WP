@@ -5,7 +5,7 @@
     add_theme_support( 'post-thumbnails' );//アイキャッチ画像を扱えるように記述
     
     //タイトル出力
-    function wpbeg_title( $title ){
+    function hamburger_site_title( $title ){
         if( is_font_page()/*投稿・固定ページに関わらず、サイトのフロントページが表示されているかを判定する*/ && is_home()/*メインブログページが表示されているかを判定する*/ ){//トップページなら
             $title = get_bloginfo( 'name', 'display' );
         } elseif ( is_singular()/*固定投稿のページかを判定する*/ ){//シングルページなら
@@ -16,7 +16,7 @@
     add_filter('pre_get_document_title', 'hamburger_site_title');
 
 
-    function hamburger_site_WP_script(){
+    function hamburger_site_script(){
         wp_enqueue_style('M+1p','//fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&display=swap',array());
         wp_enqueue_style('Roboto','//fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,100&display=swap',array());
         wp_enqueue_style('Noto+Sans+JP','//fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap',array());
@@ -26,5 +26,5 @@
         wp_enqueue_style('style',get_template_directory_url().'/css/hamburger-site.css',array(),'1.0.0');
         wp_enqueue_style('style',get_template_directory_url().'/style.css',array(),'1.0.0');
     }
-    add_action('wp_enqueue_scripts','hamburger-site_script')
+    add_action('wp_enqueue_scripts','hamburger_site_script')
     ?>
