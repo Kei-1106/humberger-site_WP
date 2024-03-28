@@ -26,5 +26,11 @@
         wp_enqueue_style('hamburger_site',get_template_directory_uri().'/css/hamburger-site.css',array(),'1.0.0');
         wp_enqueue_style('style',get_template_directory_uri().'/style.css',array(),'1.0.0');
     }
-    add_action('wp_enqueue_scripts','hamburger_site_script')
-    ?>
+    add_action('wp_enqueue_scripts','hamburger_site_script');
+
+    add_action('after_setup_theme', function(){
+        register_nav_menus(array(
+            'footer' => 'フッターナビゲーション',
+        ));
+    });
+?>
