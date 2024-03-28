@@ -41,17 +41,17 @@ html {
   }
   @media screen and (max-width: 428px) {
     .l-footer {
-      background-image: url("/img/footer_img-smart.jpg");
+      background-image: url("./img/footer_img-smart.jpg");
     }
   }
   @media screen and (min-width: 429px) and (max-width: 960px) {
     .l-footer {
-      background-image: url("/img/footer_img-tablet.jpg");
+      background-image: url("./img/footer_img-tablet.jpg");
     }
   }
   @media screen and (min-width: 961px) {
     .l-footer {
-      background-image: url("/img/footer_img-pc.jpg");
+      background-image: url("./img/footer_img-pc.jpg");
       position: absolute;
       width: 100%;
       z-index: 800;
