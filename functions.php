@@ -28,9 +28,41 @@
     }
     add_action('wp_enqueue_scripts','hamburger_site_script');
 
+    //wp_nav_menuのliにclassを追加
+    function add_additional_class_on_li($classes, $item, $args){
+        if(isset($args -> add_li_class)){
+            $classes['class'] = $args -> add_li_class;
+        }
+        return $classes;
+    }
+    add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
+
+    //wp_nav_menuのaにclassを追加
+    function add_additional_class_on_a($classes, $item, $args){
+        if(isset($args -> add_li_class)){
+            $classes['class'] = $args -> add_a_class;
+        }
+        return $classes;
+    }
+    add_filter('nav_menu_link_attributes', 'add_additional_class_on_a', 1, 3);
+
+    //メニューに項目を追加
     add_action('after_setup_theme', function(){
         register_nav_menus(array(
             'footer' => 'フッターナビゲーション',
+            'sidebar' => 'サイドバーナビゲーション',
+            'contents' => 'コンテンツ',
         ));
     });
+
+    //wp_nav_menuの値を追加
+    //function my_wp_nav_menu_footer_args(){
+        //$args['menu'] = 'footer';
+        //$args['menu_class'] = 'l-footer__inner u-display__flex u-position';
+        //$args['add_li_class'] = '';
+        //$args['add_a_class'] = 'c-text--bottom';
+        //return $args;
+    //}
+    //add_filter('wp_nav_menu_args', 'my_wp_nav_menu_footer_args');
+
 ?>
