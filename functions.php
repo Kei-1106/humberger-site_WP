@@ -65,4 +65,32 @@
     //}
     //add_filter('wp_nav_menu_args', 'my_wp_nav_menu_footer_args');
 
+    function hamburger_widgets_init(){
+        register_sidebar(
+            array(
+                'name' => 'カテゴリーのウィジェット',
+                'id' => 'category_widget',
+                'description' => 'カテゴリー用のウィジェットです',
+                'before_widget' => '<div id="%1$s" class="widget %2$s">',
+                'after_widget' => '</div>',
+                'before_titie' => '<h2><li class="l-sidebar__title u-font--bold"></li>',
+                'after_title' => "</h2>\n",
+            )
+            );
+    }
+    add_action('widgets_init' , 'hamburger_widgets_init');
+
+    function hamburger_site_theme_add_editor_styles(){
+        add_editor_style(get_template_directory_url()."/css/editor-style.css");
+    }
+    add_action('admin_init', 'hamburger_site_theme_add_editor_styles');
+
+    $count_sql = 'SELECT COUNT(*) as cnt FROM テーブル名';
+
+    if(isset($_GET['page']) && is_numeric($_GET['page'])){
+        $page = $_GET['page'];
+    } else {
+        $page = 1;
+    }
+
 ?>

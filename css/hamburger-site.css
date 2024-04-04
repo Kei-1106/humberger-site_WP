@@ -273,7 +273,22 @@ cite {
   padding-top: 212px;
 }
 .l-sidebar__title {
-  padding-left: 46px;
+  padding: 48px 0 0 46px;
+}
+.l-sidebar__title .sub-menu li{
+  margin-top: 22px;
+  padding: 0 0 0 20px;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 1.5;
+}
+@media screen and (min-width: 961px) {
+  .l-sidebar__title .sub-menu li{
+    font-size: 1.0416666667vw;
+  }
+}
+.l-sidebar__inner .menu-item-has-children:nth-child(1) .sub-menu {
+  margin-top: 32px;
 }
 .l-sidebar__hamburger {
   transform: translateX(0);
@@ -421,10 +436,11 @@ cite {
 
 .c-img__item {
   width: 50.04%;
+  height: auto;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: bottom left;
-     object-position: bottom left;
+  object-position: bottom left;
 }
 @media screen and (max-width: 428px) {
   .c-img__item {
@@ -435,9 +451,9 @@ cite {
 .c-img__head {
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: bottom;
-     object-position: bottom;
+  object-position: bottom;
 }
 @media screen and (max-width: 428px) {
   .c-img__head {
@@ -458,9 +474,9 @@ cite {
   width: 267px;
   height: 166px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: bottom;
-     object-position: bottom;
+  object-position: bottom;
 }
 @media screen and (min-width: 429px) and (max-width: 960px) {
   .c-img__foot {
@@ -477,9 +493,9 @@ cite {
 .c-img__unit {
   background-image: url("../img/cooked-foods.png");
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: bottom;
-     object-position: bottom;
+  object-position: bottom;
   width: 134px;
   height: 89px;
 }
