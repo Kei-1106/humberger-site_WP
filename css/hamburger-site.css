@@ -1120,6 +1120,9 @@ cite {
     margin-bottom: 34.5px;
   }
 }
+.p-card__title--bottom .sub-menu li { 
+  display: none;
+}
 .p-card__title::after {
   content: "";
   width: 33.89px;

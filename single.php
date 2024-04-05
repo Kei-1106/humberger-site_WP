@@ -1,8 +1,13 @@
 <?php get_header(); ?>
 <main>
+    <?php if(have_posts()):
+                the_post(); ?>
+                <div id="post-<?php the_ID(); ?>>"<?php post_class(); ?>>
                 <div class="p-common p-common__mainvisual c-background-color__black">
-                    <h1 class="p-common__title c-title--product">h1 チーズバーガー</h1>
+                    <h1 class="p-common__title c-title--product"><?php echo get_the_title(); ?></h1>
                 </div>
+                <?php endif; ?>
+                <?php echo the_content(); ?>
                 <div class="l-wrapper--sub u-padding--bottom">
                     <section class="p-product">
                         <h2 class="c-title--small">見出しh2</h2>
@@ -156,6 +161,7 @@
                     </section>
                 </div>
                 <?php get_footer(); ?>
+                </div>
             </main>
         </div>
         <?php get_sidebar(); ?>

@@ -6,6 +6,26 @@
                 </div>
                 <div class="l-main">
                     <div class="p-content u-display__flex u-gap u-display__column">
+                            <section class="p-card p-card--img p-card--img-left">
+                                <?php wp_nav_menu(array(
+                                    'theme_location' => 'take_out',
+                                    'container' => 'div',
+                                    'container_class' => 'p-card__inner u-display__flex',
+                                    'menu_class' => 'p-card__title',
+                                    'add_li_class' => ' c-title',
+                                    'add_a_class' => 'p-card_link p-card__title--bottom  p-card__inner--middle',
+                                )); ?>
+                                    <div class="p-card__inner p-card__inner--middle-bottom u-display__flex">
+                                        <div class="p-card__item c-background-color__white">
+                                            <span class="p-card__item--bottom c-title--item">Take OUT</span>
+                                            <p class="c-text--item">当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています</p>
+                                        </div>
+                                        <div class="p-card__item c-background-color__white">
+                                            <span class="p-card__item--bottom c-title--item">Take OUT</span>
+                                            <p class="c-text--item">当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています</p>
+                                        </div>
+                                    </div>
+                            </section>
                         <a class="p-card__link" href="archive.html">
                             <section class="p-card p-card--img p-card--img-left">
                                 <div class="p-card__inner p-card__inner--middle u-display__flex">

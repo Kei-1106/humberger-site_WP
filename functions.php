@@ -51,7 +51,8 @@
         register_nav_menus(array(
             'footer' => 'フッターナビゲーション',
             'sidebar' => 'サイドバーナビゲーション',
-            'contents' => 'コンテンツ',
+            'eat_in' => 'Eat_In',
+            'take_out' => 'Take_Out',
         ));
     });
 
@@ -81,7 +82,7 @@
     add_action('widgets_init' , 'hamburger_widgets_init');
 
     function hamburger_site_theme_add_editor_styles(){
-        add_editor_style(get_template_directory_url()."/css/editor-style.css");
+        add_editor_style(get_template_directory_uri(). "/css/editor-style.css");
     }
     add_action('admin_init', 'hamburger_site_theme_add_editor_styles');
 
