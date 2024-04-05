@@ -698,6 +698,9 @@ cite {
     font-size: 4.1666666667vw;
   }
 }
+.c-title .sub-menu li { 
+  display: none;
+}
 .c-title--small {
   color: #3C2A10;
   font-size: 7.486631016vw;
@@ -1089,6 +1092,11 @@ cite {
 }
 
 .p-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 663px;
+  position: relative;
   padding: 11px 15px 15px 15px;
 }
 @media screen and (min-width: 429px) and (max-width: 960px) {
@@ -1119,9 +1127,6 @@ cite {
   .p-card__title--bottom {
     margin-bottom: 34.5px;
   }
-}
-.p-card__title--bottom .sub-menu li { 
-  display: none;
 }
 .p-card__title::after {
   content: "";
