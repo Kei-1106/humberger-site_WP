@@ -698,7 +698,10 @@ cite {
     font-size: 4.1666666667vw;
   }
 }
-.c-title .sub-menu li { 
+.c-titile--none {
+  font-size: 0;
+}
+.c-title--none .sub-menu li { 
   display: none;
 }
 .c-title--small {
@@ -1092,12 +1095,16 @@ cite {
 }
 
 .p-card {
+  width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 663px;
   position: relative;
   padding: 11px 15px 15px 15px;
+}
+@media screen and (max-width: 428px) {
+  .p-card {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 429px) and (max-width: 960px) {
   .p-card {
@@ -1142,6 +1149,14 @@ cite {
 }
 .p-card__inner {
   flex-direction: column;
+}
+.p-card__inner--link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
 }
 .p-card__inner--middle {
   height: 100%;

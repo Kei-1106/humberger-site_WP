@@ -9,12 +9,13 @@
                         <section class="p-card p-card--img p-card--img-left">
                             <?php wp_nav_menu(array(
                                     'theme_location' => 'take_out',
-                                    'container' => 'div',
-                                    'container_class' => 'p-card__inner u-display__flex',
-                                    'menu_class' => 'p-card__title',
-                                    'add_li_class' => 'c-title',
-                                    'add_a_class' => 'p-card_link p-card__title--bottom  p-card__inner--middle c-title',
+                                    'add_li_class' => 'c-titile--none',
+                                    'add_a_class' => 'p-card__inner--link c-title--none',
                                 )); ?>
+                                <div class="p-card__inner p-card__inner--middle u-display__flex">
+                                    <div class="p-card__title">
+                                        <h2 class="p-card__title--bottom c-title">Take Out</h2>
+                                    </div>
                                 <div class="p-card__inner p-card__inner--middle-bottom u-display__flex">
                                     <div class="p-card__item c-background-color__white">
                                         <span class="p-card__item--bottom c-title--item">Take OUT</span>
@@ -25,7 +26,8 @@
                                         <p class="c-text--item">当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています</p>
                                     </div>
                                 </div>
-                            </section>
+                                </div>
+                        </section>
                         <section class="p-card p-card--img p-card--img-right">
                             <a class="" href="archive.html">
                                 <div class="p-card__inner p-card__inner--middle u-display__flex">
