@@ -287,7 +287,7 @@ cite {
     font-size: 1.0416666667vw;
   }
 }
-.l-sidebar__inner .menu-item-has-children:nth-child(1) .sub-menu {
+.l-sidebar__inner .sub-menu {
   margin-top: 32px;
 }
 .l-sidebar__hamburger {
@@ -439,8 +439,9 @@ cite {
   height: auto;
   -o-object-fit: cover;
   object-fit: cover;
-  -o-object-position: bottom left;
-  object-position: bottom left;
+  -o-object-position: center;
+  object-position: center;
+  aspect-ratio: 677/471;
 }
 @media screen and (max-width: 428px) {
   .c-img__item {
@@ -660,23 +661,6 @@ cite {
   font-size: 16px;
   line-height: 1.4375;
 }
-.c-text--number {
-  font-family: "Roboto";
-  font-weight: bold;
-}
-.c-text--number-list {
-  padding: 7px 13px;
-  border: 1px solid #707070;
-  transition: color 0.25s, background-color 0.25s;
-}
-.c-text--number-list:hover {
-  color: #fff;
-  background-color: #3C2B1C;
-}
-.c-text--number-current {
-  color: #fff;
-  background-color: #3C2B1C;
-}
 .c-text--bottom {
   color: #fff;
   font-size: 20px;
@@ -698,10 +682,10 @@ cite {
     font-size: 4.1666666667vw;
   }
 }
-.c-titile--none {
+.c-title--none {
   font-size: 0;
 }
-.c-title--none .sub-menu li { 
+.c-title--none .sub-menu { 
   display: none;
 }
 .c-title--small {
@@ -1240,7 +1224,6 @@ cite {
   }
 }
 .p-common__mainvisual {
-  background-image: url("../img/burg_tizu.jpg");
   background-position: center;
   background-size: 235%;
 }
@@ -1270,7 +1253,7 @@ cite {
 }
 .p-content__inner {
   width: 49.96%;
-  padding-top: 30.5px;
+  padding: 32.47px 16.11px 43.66px 17px;
   box-sizing: border-box;
 }
 @media screen and (max-width: 428px) {
@@ -1280,75 +1263,40 @@ cite {
 }
 @media screen and (min-width: 429px) and (max-width: 960px) {
   .p-content__inner {
-    padding-top: 29px;
+    padding: 31px 59px 40.03px 34.72px;
   }
 }
 @media screen and (min-width: 961px) {
   .p-content__inner {
-    padding-top: 53px;
+    padding: 56px 104px 60px 63px;
   }
 }
 .p-content__inner--top {
-  margin-left: 17px;
-  padding-bottom: 24px;
-}
-@media screen and (min-width: 429px) and (max-width: 960px) {
-  .p-content__inner--top {
-    margin-left: 34.7px;
-  }
+  padding-bottom: 21px;
 }
 @media screen and (min-width: 961px) {
   .p-content__inner--top {
-    margin-left: 63px;
-    padding-bottom: 47px;
+    padding-bottom: 44px;
   }
 }
 .p-content__inner--medium {
-  margin-left: 17px;
-  margin-right: 73.1px;
-  padding: 10px 0 40px 0;
+  padding-top: 7px;
+  padding-bottom:40px;
 }
 @media screen and (min-width: 429px) and (max-width: 960px) {
   .p-content__inner--medium {
-    margin-left: 34.7px;
-    margin-right: 59px;
-    padding: 10px 0 45px 0;
+    padding-bottom:45px;
   }
 }
 @media screen and (min-width: 961px) {
   .p-content__inner--medium {
-    margin-left: 63px;
-    margin-right: 104px;
-    padding: 17px 0 60px 0;
+    padding-top: 13px;
+    padding-bottom:60px;
   }
 }
 .p-content__inner--bottom {
   display: grid;
   justify-content: center;
-  margin: 0 auto 43.7px;
-}
-@media screen and (min-width: 429px) and (max-width: 960px) {
-  .p-content__inner--bottom {
-    margin: 0 auto 40px;
-  }
-}
-@media screen and (min-width: 961px) {
-  .p-content__inner--bottom {
-    margin: 0 auto 60px;
-  }
-}
-.p-content__inner--small {
-  margin-left: 17px;
-}
-@media screen and (min-width: 429px) and (max-width: 960px) {
-  .p-content__inner--small {
-    margin-left: 34.7px;
-  }
-}
-@media screen and (min-width: 961px) {
-  .p-content__inner--small {
-    margin-left: 63px;
-  }
 }
 .p-content__box {
   position: relative;
@@ -1502,7 +1450,52 @@ cite {
     display: none;
   }
 }
-
+@media screen and (max-width: 428px){
+  .p-pagination__inner--sm {
+    display: flex;
+    align-items: center;
+  }
+}
+.c-text--number {
+  font-family: "Roboto";
+  font-weight: bold;
+}
+.c-text--numbers-list {
+  width: 1.82vw;
+  height: 1.82vw;
+  border: 1px solid #707070;
+}
+.c-text--numbers-list a:hover {
+  color: #fff;
+  background-color: #3C2B1C;
+}
+.c-text--numbers-list-current {
+  width: 1.82vw;
+  height: 1.82vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #3C2B1C;  
+  border: 1px solid #707070;
+}
+.c-text--numbers-list a {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.25s, background-color 0.25s;
+}
+@media screen and (max-width: 428px){
+  .u-text__left {
+    margin-left: 8px;
+  }
+}
+@media screen and (max-width: 428px){
+  .u-text__right {
+    margin-right: 8px;
+  }
+}
 .p-product {
   margin-top: 60px;
   max-width: 100%;
@@ -1835,7 +1828,41 @@ cite {
 .u-text__bold {
   font-weight: bold;
 }
-
+.p-page404{
+  width: 1000px;
+  margin: 50px auto;
+  text-align: center;
+}
+.c-page404__title{
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+.c-page404__sub{
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.c-page404__text{
+  font-size: 1.8px;
+  line-height: 1.5;
+}
+.c-page404__button{
+  width: 200px;
+  margin: 0 auto;
+}
+.c-page404__button a{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #222;
+  color: #fff;
+}
+.c-page404__button a:hover{
+  background: #fff;
+  color: #222;
+  border: 1px solid #222;
+}
 /** 
 * Foundation
 * ========================== */

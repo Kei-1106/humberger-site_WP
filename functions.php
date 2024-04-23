@@ -25,6 +25,8 @@
         wp_enqueue_style('normalize',get_template_directory_uri().'/css/normalize.css',array(),'8.0.1');
         wp_enqueue_style('hamburger_site',get_template_directory_uri().'/css/hamburger-site.css',array(),'1.0.0');
         wp_enqueue_style('style',get_template_directory_uri().'/style.css',array(),'1.0.0');
+        wp_enqueue_script('jquery','http://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js', array(), '3.6.1');
+        wp_enqueue_script('js',get_template_directory_uri().'/js/main.js',array(),'3.6.1');
     }
     add_action('wp_enqueue_scripts','hamburger_site_script');
 
@@ -56,16 +58,6 @@
         ));
     });
 
-    //wp_nav_menuの値を追加
-    //function my_wp_nav_menu_footer_args(){
-        //$args['menu'] = 'footer';
-        //$args['menu_class'] = 'l-footer__inner u-display__flex u-position';
-        //$args['add_li_class'] = '';
-        //$args['add_a_class'] = 'c-text--bottom';
-        //return $args;
-    //}
-    //add_filter('wp_nav_menu_args', 'my_wp_nav_menu_footer_args');
-
     function hamburger_widgets_init(){
         register_sidebar(
             array(
@@ -77,21 +69,64 @@
                 'before_titie' => '<h2><li class="l-sidebar__title u-font--bold"></li>',
                 'after_title' => "</h2>\n",
             )
-            );
+        );
     }
     add_action('widgets_init' , 'hamburger_widgets_init');
 
-    function hamburger_site_theme_add_editor_styles(){
-        add_editor_style(get_template_directory_uri(). "/css/editor-style.css");
+    function hamburger_site_theme_add_editor_styles(){//投稿記事ページにcssを表示
+        add_editor_style(get_template_directory_uri() . "/css/editor-style.css");
     }
     add_action('admin_init', 'hamburger_site_theme_add_editor_styles');
 
-    $count_sql = 'SELECT COUNT(*) as cnt FROM テーブル名';
-
-    if(isset($_GET['page']) && is_numeric($_GET['page'])){
-        $page = $_GET['page'];
-    } else {
-        $page = 1;
+    function remcat_function($link){//URLから/tag/を消す処理の実行
+        return str_replace( "/tag/" , "/", $link);
     }
+    add_filter('user_trailingslashit' , 'remcat_function');
+
+    function remcat_flush_rules(){//WordPressのルーティング（パーマリンク）ルールをリセットするために使用
+        global $wp_rewrite;
+        $wp_rewrite->flush_rules();//←を呼び出す事で新しいルールを適用
+    }
+    add_action('init' , 'remcat_flush_rules');
+
+    //ページネーションの変更
+    function pagination($pages = '', $range = 8){//現在のページ数、総ページ数
+        $showitems = ($range * 1) +1;
+        global $paged;
+        if(empty($paged)) $paged = 1;
+        if($pages == ''){
+            global $wp_query;
+            $pages = $wp_query -> max_num_pages;
+            if(!$pages){
+                $pages = 1;
+            }
+        }
+        if(1 != $pages){
+            //画像を使う時用に、テーマのパスを取得
+            $img_pass = get_template_directory_uri();
+            echo "<div class = \"p-pagination__inner u-display__flex c-text--small-gray p-contents\">";
+            //「1/2」の表示　現在のページ数/総ページ数
+            echo "<div class = \"p-pagination__inner--left c-text--number\">"."page&nbsp;" . $paged."/". $pages. "</div>";
+            //「前へ」を表示
+            if($paged > 1){ echo "<div><a href='".get_pagenum_link($paged - 1)."' class = \"p-pagination__inner--sm\"><img src=\"".$img_pass."/img/icon/pagination_prev.png\" alt=\"前へのアイコン\"></img><span class=\"p-pagination__inner--text u-font--normal u-text__left u-font--bold\">前へ</span></a></div>";
+            }else {
+                    echo "<div></div>";
+                }
+            //ページ番号を出力
+            echo "<ul class = \"p-pagination__inner--center c-text--number\">\n";
+            for($i = 1; $i <= $pages; $i++){
+                if(1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems)){
+                    echo ($paged == $i)? "<li class=\"c-text--numbers-list-current\">".$i."</li>":
+                        "<li class=\"c-text--numbers-list\"><a href='".get_pagenum_link($i)."'> ".$i."</a></li>"; 
+                }
+            }
+            echo "</ul>\n";
+            //「次へ」を表示
+            if($paged < $pages) echo "<div><a href='".get_pagenum_link($paged + 1)."' class=\"p-pagination__inner--sm\"><span class=\"p-pagination__inner--text u-font--normal u-text__right u-font--bold\">次へ</span><img src=\"".$img_pass."/img/icon/pagination_next.png\" alt=\"次へのアイコン\"></img></a></div>";
+            echo "</div>\n";
+        }
+    }
+
+    remove_filter('pre_term_description', 'wp_filter_kses');//カテゴリーやタグの説明文をHTMLに変換
 
 ?>

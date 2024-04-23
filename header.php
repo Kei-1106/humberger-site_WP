@@ -6,10 +6,11 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="ハンバーガーサイト">
     <meta name="viewport" content="width=device-width, initial-scale">
-    <link rel="shortcut icon" href="<?php echo esc_url(get_template_directory_uri()); ?>/img/favicon.ico">
+    <link rel="shortcut icon" href="<?php echo esc_url(get_template_directory_uri()); ?>/img/icon/favicon.png">
     <link rel="stylesheet" href="https://ajax.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <?php wp_deregister_script('jquery'); ?>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
