@@ -1,9 +1,13 @@
 <?php
     //テーマサポート
-    add_theme_support( 'menus' );
     add_theme_support( 'title-tag' );
     add_theme_support( 'post-thumbnails' );//アイキャッチ画像を扱えるように記述
     add_theme_support( 'automatic-feed-links' );
+    add_theme_support( 'custom-background' );
+    add_theme_support( 'wp-block-styles' );
+    add_theme_support( 'responsive-embeds' );
+    add_theme_support( 'custom-logo' );
+    add_theme_support( 'align-wide' );
     
     //タイトル出力
     function hamburger_site_title( $title ){
@@ -16,7 +20,6 @@
     }
     add_filter( 'pre_get_document_title' , 'hamburger_site_title' );
 
-
     function hamburger_site_script(){
         wp_enqueue_style('M+1p','//fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&display=swap',array());
         wp_enqueue_style('Roboto','//fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,100&display=swap',array());
@@ -26,7 +29,6 @@
         wp_enqueue_style('normalize',get_template_directory_uri().'/css/normalize.css',array(),'8.0.1');
         wp_enqueue_style('hamburger_site',get_template_directory_uri().'/css/hamburger-site.css',array(),'1.0.0');
         wp_enqueue_style('style',get_template_directory_uri().'/style.css',array(),'1.0.0');
-        wp_enqueue_script('jquery','http://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js', array(), '3.6.1');
         wp_enqueue_script('js',get_template_directory_uri().'/js/main.js',array(),'3.6.1');
     }
     add_action( 'wp_enqueue_scripts' , 'hamburger_site_script' );
@@ -55,24 +57,9 @@
             'footer' => 'フッターナビゲーション',
             'sidebar' => 'サイドバーナビゲーション',
             'eat_in' => 'Eat_In',
-            'take_out' => 'Take_Out',
+            'take_out' => 'Take_Out'
         ));
     });
-
-    function hamburger_widgets_init(){
-        register_sidebar(
-            array(
-                'name' => 'カテゴリーのウィジェット',
-                'id' => 'category_widget',
-                'description' => 'カテゴリー用のウィジェットです',
-                'before_widget' => '<div id="%1$s" class="widget %2$s">',
-                'after_widget' => '</div>',
-                'before_titie' => '<h2><li class="l-sidebar__title u-font--bold"></li>',
-                'after_title' => "</h2>\n",
-            )
-        );
-    }
-    add_action( 'widgets_init' , 'hamburger_widgets_init' );
 
     function hamburger_site_theme_add_editor_styles(){//投稿記事ページにcssを表示
         add_editor_style( get_template_directory_uri() . "/css/editor-style.css" );
@@ -130,4 +117,8 @@
 
     remove_filter( 'pre_term_description' , 'wp_filter_kses' );//カテゴリーやタグの説明文をHTMLに変換
 
+    function hamburger_site_wp_theme_setup(){
+        load_theme_textdomain( 'hamburger_site_wp', get_template_directory().'/languages' );
+    }
+    add_action( 'after_setup_theme', 'hamburger_site_wp_theme_setup' );
 ?>

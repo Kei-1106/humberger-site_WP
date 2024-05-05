@@ -2,7 +2,6 @@
 <html lang = "<?php language_attributes(); ?>"><!--言語設定を自動的に出力-->
 <head>
     <meta charset = "UTF-8">
-    <title>ハンバーガーサイト</title>
     <meta name = "format-detection" content = "telephone=no">
     <meta name = "description" content = "ハンバーガーサイト">
     <meta name = "viewport" content = "width=device-width, initial-scale">
@@ -10,10 +9,12 @@
     <link rel = "stylesheet" href = "https://ajax.googleapis.com">
     <link rel = "preconnect" href = "https://fonts.googleapis.com">
     <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
-    <?php wp_deregister_script( 'jquery' ); ?>
+    <?php if( is_singular() )wp_enqueue_script( "comment-reply" ); ?>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
     <div class = "u-display__flex u-position">
         <div class = "u-display">
             <header class = "l-header c-background-color__orange-light">

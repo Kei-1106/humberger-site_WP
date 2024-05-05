@@ -1863,6 +1863,81 @@ cite {
   color: #222;
   border: 1px solid #222;
 }
+
+.wp-caption {
+  font-size: 1.3rem;
+}
+
+.wp-caption-text {
+  margin-top: -20px;
+}
+
+.sticky {
+  padding: 20px;
+  background: #f3f3f3;
+}
+
+.gallery-caption {
+  font-size: 1.3rem;
+}
+
+.bypostauthor {
+  padding: 20px;
+  background: #f0f8ff;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+  background-color: #eee;
+  clip: auto !important;
+  clip-path: none;
+  color: #444;
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar　*/
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-right: 1rem;
+}
+
+.alignleft {
+  display: inline;
+  float: left;
+  margin-left: 1rem;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  float: center;
+  margin-left: auto;
+  margin-right: auto;
+}
 /** 
 * Foundation
 * ========================== */

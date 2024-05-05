@@ -10,7 +10,7 @@
                         <h1 class = "c-page404__title">404 NOT FOUND</h1>
                         <h2 class = "c-page404__sub">お探しのページは見つかりませんでした</h2>
                         <p class = "c-page404__text">お探しのページは見つかりませんでした。<br>ご指定いただいたURLはすでに削除されたか、間違っている可能性があります。</p>
-                        <div class = "c-page404__button"><a href="<?php echo home_url(home_url( '/' )); ?>">TOPへ戻る</a></div>
+                        <div class = "c-page404__button"><a href="<?php echo esc_url(home_url( '/' )); ?>">TOPへ戻る</a></div>
                     </div>
                 </div>
                 <?php get_footer(); ?>

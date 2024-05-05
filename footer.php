@@ -6,4 +6,5 @@
         'add_a_class' => 'c-text--bottom',
     )); ?>
     <p class = "c-text u-align">Copyright:&nbsp;<?php bloginfo('name'); ?></p>
+    <?php wp_footer() ?>
 </footer>
