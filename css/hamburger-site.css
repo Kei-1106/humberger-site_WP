@@ -1840,10 +1840,14 @@ cite {
 .u-text__bold {
   font-weight: bold;
 }
-.p-page404{
-  width: 1000px;
-  margin: 50px auto;
+.p-page404 {
   text-align: center;
+  min-height: 681px;
+}
+@media screen and (min-width: 961px){
+  .p-page404 {
+    min-height: 1473px;
+  }
 }
 .c-page404__title{
   font-size: 30px;
@@ -1854,12 +1858,14 @@ cite {
   margin-bottom: 15px;
 }
 .c-page404__text{
-  font-size: 1.8px;
+  font-size: 16px;
   line-height: 1.5;
 }
 .c-page404__button{
   width: 200px;
-  margin: 0 auto;
+  margin: 150px auto;
+  position: relative;
+  z-index: 800;
 }
 .c-page404__button a{
   width: 100%;
@@ -1869,6 +1875,9 @@ cite {
   justify-content: center;
   background: #222;
   color: #fff;
+}
+.c-page404__button-active{
+  z-index: unset;
 }
 .c-page404__button a:hover{
   background: #fff;

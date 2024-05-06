@@ -12,7 +12,7 @@
                     <div class = "p-common p-common__mainvisual c-background-color__black" style = "background-image: url('<?php echo $url; ?>');">
                         <h1 class = "p-common__title c-title--product"><?php echo get_the_title(); ?></h1>
                     </div>
-                <?php else :?>
+                <?php else: ?>
                     <div class = "p-common p-common__mainvisual c-background-color__black" style="background-image: url('<?php echo $noimage; ?>');">
                         <h1 class = "p-common__title c-title--product"><?php echo get_the_title(); ?></h1>
                     </div>

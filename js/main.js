@@ -41,6 +41,7 @@ ham.on('click', function(){
     $(".p-content").toggleClass("p-content-active");
     $(".c-button--secondary").toggleClass("c-button--secondary-active");
     $(".l-footer__inner").toggleClass("l-footer__inner-active");
+    $(".c-page404__button").toggleClass("c-page404__button-active");
     });
 });
 
