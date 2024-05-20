@@ -39,9 +39,9 @@ ham.on('click', function(){
     $(".l-main-hide-contents").toggleClass("l-main-hide-contents-active");
     $(".l-header").toggleClass("l-header-active");
     $(".p-content").toggleClass("p-content-active");
-    $(".c-button--secondary").toggleClass("c-button--secondary-active");
     $(".l-footer__inner").toggleClass("l-footer__inner-active");
     $(".c-page404__button").toggleClass("c-page404__button-active");
+    $(".wp-element-button").toggleClass("wp-element-button-active");
     });
 });
 
@@ -52,3 +52,4 @@ $(function(){
     ham.on('click', function(){
         });
     });
+

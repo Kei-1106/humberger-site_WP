@@ -1,40 +1,42 @@
-@import url('./hamburger-site.css');
 html {
-    font-size: 62.5%;
-  }
-  
-  body {
-    font-family: "M PLUS 1p", Meiryo, "Roboto", Roboto, "YuGothic", "Noto Sans JP", "Hiragino Kaku Gothic Pro", "メイリオ", Osaka, sans-serif;
-    background-color: #fffdfa;
-    overflow-x: hidden;
-  }
-  
-  img {
-    max-width: 100%;
-  }
-  
-  html, body,
-  p, ol, ul, li, dl, dt, dd,
-  blockquote, figure, fieldset, legend, textarea, pre, iframe, span, button, table, input,
-  h1, h2, h3, h4, h5, h6, hr {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  
-  a, text, span, div {
-    text-decoration: none;
-    color: #707070;
-  }
-  
-  button, input[type=submit], a {
-    cursor: pointer;
-  }
-  
-  cite {
-    font-style: normal;
-  }
-  
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "M PLUS 1p", Meiryo, "Roboto", Roboto, "YuGothic", "Noto Sans JP", "Hiragino Kaku Gothic Pro", "メイリオ", Osaka, sans-serif;
+  background-color: #fffdfa;
+  overflow-x: hidden;
+  line-height: 1.5;
+  margin: 0 100px;
+  padding-bottom: 353px;
+}
+
+img {
+  max-width: 100%;
+}
+
+html, body,
+p, ol, ul, li, dl, dt, dd,
+blockquote, figure, fieldset, legend, textarea, pre, iframe, span, button, table, input,
+h1, h2, h3, h4, h5, h6, hr {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a, text, span, div {
+  text-decoration: none;
+  color: #707070;
+}
+
+button, input[type=submit], a {
+  cursor: pointer;
+}
+
+cite {
+  font-style: normal;
+}
+
   .l-footer {
     height: 120px;
     padding-bottom: 30px;
@@ -1813,7 +1815,94 @@ html {
     font-weight: bold;
   }
   
-  /** 
+  .wp-block-heading {
+    color: #3C2A10;
+  }
+
+  .editor-editor-canvas__post-title-wrapper h1 {
+    color: #3C2A10;
+    margin: 28px;
+    line-height: revert;
+    font-size: 9.6256684492vw;
+  }
+
+  @media screen and (min-width: 429px) and (max-width: 960px) {
+    .editor-editor-canvas__post-title-wrapper h1 {
+      font-size: 7.1942446043vw;
+    }
+  }
+
+  @media screen and (min-width: 961px) {
+    .editor-editor-canvas__post-title-wrapper h1 {
+      font-size: 3.125vw;
+    }
+  }
+
+  .wp-block-post-content h2 {
+    font-size: 7.486631016vw;
+    margin-top: 60px;
+  }
+
+  @media screen and (max-width:428px){
+    .wp-block-post-content h2 {
+      margin-top: 30px;
+    }
+  }
+
+  @media screen and (min-width: 429px) and (max-width:960px){
+    .wp-block-post-content h2 {
+      font-size: 4.3165467626vw;
+    }
+  }
+
+  @media screen and (min-width: 961px){
+    .wp-block-post-content h2 {
+      font-size: 1.875vw;
+    }
+  }
+  .wp-block-post-content h3 {
+    font-size: 6.4171122995vw;
+    margin-top: 60px;
+  }
+
+  @media screen and (max-width: 428px){
+    .wp-block-post-content h3 {
+      margin-top: 34px;
+    }
+  }
+
+  @media screen and (min-width: 429px) and (max-width:960px){
+    .wp-block-post-content h3 {
+      font-size: 3.3573141487vw;
+    }
+  }
+  @media screen and (min-width:961px){
+    .wp-block-post-content h3 {
+      font-size: 1.4583333333vw;
+    }
+  }
+
+
+  .editor-styles-wrapper {
+    margin: 0 20px;
+    padding-bottom: 177px;
+  }
+
+  @media screen and (min-width: 429px) and (max-width: 960px){
+    .editor-styles-wrapper {
+      margin: 0 60px;
+      padding-bottom: 227px;
+    }
+  }
+
+  @media screen and (min-width: 961px){
+    .editor-styles-wrapper {
+      margin:  0 100px;
+      padding-bottom: 353px;
+    }
+  }
+
+    /** 
   * Foundation
   * ========================== */
   /** 

@@ -38,7 +38,7 @@
                                         <?php if(has_post_thumbnail()): ?>
                                             <?php the_post_thumbnail('full',['class' => 'c-img__item']); ?>
                                         <?php else: ?>
-                                            <img src="<?php echo get_template_directory_uri(); ?>/img/noimage.png" alt = "Noimage" class = "c-img__item"/>
+                                            <img src="<?php echo esc_url( get_template_directory_uri()); ?>/img/noimage.png" alt = "Noimage" class = "c-img__item"/>
                                         <?php endif; ?>
                                         <figcaption class = "p-content__inner">
                                             <h3 class = "p-content__inner--top c-text--top"><?php echo get_the_title(); ?></h3>

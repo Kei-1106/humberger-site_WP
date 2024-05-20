@@ -8,6 +8,7 @@
     add_theme_support( 'responsive-embeds' );
     add_theme_support( 'custom-logo' );
     add_theme_support( 'align-wide' );
+    add_theme_support( 'block-templates' );
     
     //タイトル出力
     function hamburger_site_title( $title ){
@@ -60,11 +61,6 @@
             'take_out' => 'Take_Out'
         ));
     });
-
-    function hamburger_site_theme_add_editor_styles(){//投稿記事ページにcssを表示
-        add_editor_style( get_template_directory_uri() . "/css/editor-style.css" );
-    }
-    add_action( 'admin_init' , 'hamburger_site_theme_add_editor_styles' );
 
     function remcat_function( $link ){//URLから/tag/を消す処理の実行
         return str_replace( "/tag/" , "/" , $link );
@@ -121,4 +117,17 @@
         load_theme_textdomain( 'hamburger_site_wp', get_template_directory().'/languages' );
     }
     add_action( 'after_setup_theme', 'hamburger_site_wp_theme_setup' );
-?>
+
+    /** エディタにオリジナルのスタイルを適用 */
+    function wpdocs_theme_add_editor_styles() {
+	add_theme_support( 'editor-styles' );
+	add_editor_style( array('css/editor-style01.css' ) );
+    }
+    add_action( 'after_setup_theme', 'wpdocs_theme_add_editor_styles' );
+    
+    function custom_theme_setup() {
+        add_theme_support( 'wp-block-styles' );
+    }
+    add_action( 'after_setup_theme', 'custom_theme_setup' );
+
+    ?>
