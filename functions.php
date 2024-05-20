@@ -121,7 +121,7 @@
     /** エディタにオリジナルのスタイルを適用 */
     function wpdocs_theme_add_editor_styles() {
 	add_theme_support( 'editor-styles' );
-	add_editor_style( array('css/editor-style01.css' ) );
+	add_editor_style( array('css/editor-style.css' ) );
     }
     add_action( 'after_setup_theme', 'wpdocs_theme_add_editor_styles' );
     
