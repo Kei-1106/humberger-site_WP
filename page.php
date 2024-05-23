@@ -17,7 +17,9 @@
                         <h1 class = "p-common__title c-title--product"><?php echo get_the_title(); ?></h1>
                     </div>
                 <?php endif; ?>
-                    <?php the_content(); ?>
+                    <div class = "l-wrapper--sub">
+                        <?php the_content(); ?>
+                    </div>
                     <div class="p-pagelink">
                         <?php wp_link_pages( 'before=<p>&after=</p>&next_or_number=number&pagelink= %' ); ?>
                     </div>

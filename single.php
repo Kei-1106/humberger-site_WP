@@ -17,9 +17,11 @@
                             <h1 class = "p-common__title c-title--product"><?php echo get_the_title(); ?></h1>
                         </div>
                     <?php endif; ?>
-                        <?php the_content(); ?>
+                        <div class = "l-wrapper--sub">
+                            <?php the_content(); ?>
+                        </div>
                         <?php get_footer(); ?>
-                </div>
+                    </div>
             <?php endwhile; else: ?>
                     <p>表示する記事はありません</p>
                     <?php get_footer(); ?>
