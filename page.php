@@ -26,7 +26,9 @@
                     <?php get_footer(); ?>
                 </div>
             <?php endwhile; else: ?>
-                    <p>表示する記事はありません</p>
+                    <div class = "l-wrapper--sub">
+                        <p>表示する記事はありません</p>
+                    </div>
                     <?php get_footer(); ?>
                 </div>
             <?php endif; ?>
