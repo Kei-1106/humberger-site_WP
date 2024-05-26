@@ -130,4 +130,16 @@
     }
     add_action( 'after_setup_theme', 'custom_theme_setup' );
 
+    function hamburger_excerpt($length) {
+        global $post;
+        $content = mb_substr(strip_tags($post->post_excerpt),0,$length);
+        if(!$content){
+        $content =  $post->post_content;
+        $content =  strip_shortcodes($content);
+        $content =  html_entity_decode($content,ENT_QUOTES,"UTF-8");
+        $content =  mb_substr($content,0,$length);
+        }
+        return $content;
+        }
+
     ?>

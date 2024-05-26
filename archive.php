@@ -48,10 +48,10 @@
                                             <img src="<?php echo esc_url( get_template_directory_uri()); ?>/img/noimage.png" alt = "Noimage" class = "c-img__item"/>
                                         <?php endif; ?>
                                     <figcaption class = "p-content__inner">
-                                        <h3 class = "p-content__inner--top c-text--top"><?php echo get_the_title(); ?></h3>
-                                        <?php the_excerpt(); ?>
+                                        <div class = "p-content__inner--top c-text--top"><?php echo get_the_title(); ?></div>
+                                        <?php echo hamburger_excerpt(300); ?>...
                                         <div class = "p-content__inner--bottom">
-                                            <div class = "c-text--small-gray c-button">詳しく見る</div>
+                                            <button class = "c-text--small-gray c-button">詳しく見る</button>
                                         </div>
                                     </figcaption>
                                 </figure>

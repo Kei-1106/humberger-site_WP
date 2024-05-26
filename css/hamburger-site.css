@@ -435,6 +435,12 @@ pre {
   margin: 35px 20px 70px 20px;
 }
 
+@media screen and (max-width: 428px){
+  .l-wrapper--sub {
+    min-height: 700px;
+  }
+}
+
 @media screen and (min-width: 429px) and (max-width: 960px) {
   .l-wrapper--sub {
     margin: 60px 60px 150px 60px;
@@ -627,6 +633,7 @@ pre {
 
 .c-text--top {
   color: #fff;
+  font-weight: bold;
   font-size: 5.3333333333vw;
 }
 
@@ -1381,12 +1388,20 @@ pre {
   max-width: 163.16px;
   height: 42.47px;
   margin: auto;
+  margin-top: 40px;
   display: flex;
   text-align: center;
 }
 
+@media screen and (min-width: 429px) and (max-width: 960px){
+  .p-content__inner--bottom {
+    margin-top: 45px;
+  }
+}
+
 @media screen and (min-width: 961px) {
   .p-content__inner--bottom {
+    margin-top: 60px;
     max-width: 292px;
     height: 76px;
   }
@@ -1965,7 +1980,7 @@ pre {
 
 @media screen and (min-width: 429px) and (max-width:960px){
   .status-publish h2 {
-    font-size: 4.3165 467626vw;
+    font-size: 4.3165467626vw;
     margin-bottom: 55px;
   }
 }
@@ -1987,7 +2002,7 @@ pre {
 @media screen and (min-width: 429px) and (max-width: 960px){
   .status-publish h3 {
     font-size: 3.3573141487vw;
-    margin-bottom: 55 px;
+    margin-bottom: 55px;
   }
 }
 
@@ -2022,7 +2037,7 @@ pre {
 @media screen and (max-width: 428px){
   .status-publish h5 {
     font-size: 5.3475935829vw;
-    margin-bottom: 27px ;
+    margin-bottom: 27px;
   }
 }
 
@@ -2057,7 +2072,7 @@ pre {
 @media screen and (min-width:961px){
   .status-publish h6 {
     font-size: 1.0416666667vw;
-    margin-bottom: 56px ;
+    margin-bottom: 56px;
   }
 }
 
@@ -2442,6 +2457,34 @@ pre {
     grid-column: unset;
     grid-row: unset;
   }
+}
+
+.p-content__inner > .wp-block-heading {
+  margin-bottom: 7px;
+  font-size: 4.2666666667vw;
+  font-weight: bold;
+  color: #fff;
+}
+
+@media screen and (min-width: 429px) and (max-width: 960px){
+  .p-content__inner > .wp-block-heading {
+    font-size: 1.9184652278vw;
+  }
+}
+
+@media screen and (min-width: 961px){
+  .p-content__inner > .wp-block-heading {
+    margin-bottom: 13px;
+    font-size: 1.25vw;
+  }
+}
+
+.p-content__inner > .wp-block-preformatted {
+  font-size: 16px;
+  line-height: 1.4375;
+  color: #fff;
+  margin-bottom: 0;
+  display: table;
 }
 
 /** 
