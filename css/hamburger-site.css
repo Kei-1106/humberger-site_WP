@@ -108,7 +108,13 @@ pre {
 .l-header {
   position: relative;
   z-index: 800;
-  padding: 40px 0;
+  padding: 40px 26px 40px 31px;
+}
+
+@media screen and (min-width: 429px) and (max-width: 960px){
+  .l-header {
+    padding: 40px 144px;
+  }
 }
 
 @media screen and (min-width: 961px) {
@@ -339,6 +345,16 @@ pre {
   padding-top: 212px;
 }
 
+.l-sidebar__inner-active {
+  padding-bottom: 558px;
+}
+
+@media screen and (min-width: 961px){
+  .l-sidebar__inner-active {
+    padding-bottom: 0;
+  }
+}
+
 .l-sidebar__title {
   padding: 48px 0 0 46px;
 }
@@ -368,6 +384,7 @@ pre {
   position: absolute;
   top: 0;
   bottom: 0;
+  overflow-y: auto;
 }
 
 @media screen and (max-width: 428px) {
@@ -385,6 +402,7 @@ pre {
 @media screen and (min-width: 961px) {
   .l-sidebar__hamburger {
     position: static;
+    overflow-y: hidden;
   }
 }
 
@@ -2471,6 +2489,19 @@ pre {
     padding-top: 13px;
     padding-bottom:60px;
     font-size: 0.8333333333vw;
+  }
+}
+.wp-embed-responsive {
+  overflow-y: auto;
+}
+
+.wp-embed-responsive-active {
+  overflow-y: hidden;
+}
+
+@media screen and (min-width:961px){
+  .wp-embed-responsive-active {
+    overflow-y: auto;
   }
 }
 /** 
