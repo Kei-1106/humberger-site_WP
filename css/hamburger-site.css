@@ -631,20 +631,20 @@ pre {
   }
 }
 
-.c-text--top {
+.p-content .p-content__inner .c-text--top {
   color: #fff;
   font-weight: bold;
   font-size: 5.3333333333vw;
 }
 
 @media screen and (min-width: 429px) and (max-width: 960px) {
-  .c-text--top {
+  .p-content .p-content__inner .c-text--top {
     font-size: 2.3980815348vw;
   }
 }
 
 @media screen and (min-width: 961px) {
-  .c-text--top {
+  .p-content .p-content__inner .c-text--top {
     font-size: 1.875vw;
   }
 }
@@ -1388,20 +1388,12 @@ pre {
   max-width: 163.16px;
   height: 42.47px;
   margin: auto;
-  margin-top: 40px;
   display: flex;
   text-align: center;
 }
 
-@media screen and (min-width: 429px) and (max-width: 960px){
-  .p-content__inner--bottom {
-    margin-top: 45px;
-  }
-}
-
 @media screen and (min-width: 961px) {
   .p-content__inner--bottom {
-    margin-top: 60px;
     max-width: 292px;
     height: 76px;
   }
@@ -2459,34 +2451,28 @@ pre {
   }
 }
 
-.p-content__inner > .wp-block-heading {
-  margin-bottom: 7px;
-  font-size: 4.2666666667vw;
-  font-weight: bold;
+.p-content__inner > p {
+  padding-top: 7px;
+  padding-bottom:40px;
   color: #fff;
+  font-size: 4.2666666667vw;
+  line-height: 1.4375;
 }
 
 @media screen and (min-width: 429px) and (max-width: 960px){
-  .p-content__inner > .wp-block-heading {
+  .p-content__inner >p {
+    padding-bottom:45px;
     font-size: 1.9184652278vw;
   }
 }
 
 @media screen and (min-width: 961px){
-  .p-content__inner > .wp-block-heading {
-    margin-bottom: 13px;
-    font-size: 1.25vw;
+  .p-content__inner >p {
+    padding-top: 13px;
+    padding-bottom:60px;
+    font-size: 0.8333333333vw;
   }
 }
-
-.p-content__inner > .wp-block-preformatted {
-  font-size: 16px;
-  line-height: 1.4375;
-  color: #fff;
-  margin-bottom: 0;
-  display: table;
-}
-
 /** 
 * Foundation
 * ========================== */

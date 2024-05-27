@@ -42,7 +42,7 @@
                                         <?php endif; ?>
                                         <figcaption class = "p-content__inner">
                                             <div class = "p-content__inner--top c-text--top"><?php echo get_the_title(); ?></div>
-                                            <?php echo hamburger_excerpt(300); ?>...
+                                            <?php echo the_excerpt(); ?>
                                             <div class = "p-content__inner--bottom">
                                                 <div class = "c-text--small-gray c-button">詳しく見る</div>
                                             </div>
