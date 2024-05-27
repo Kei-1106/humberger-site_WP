@@ -41,8 +41,8 @@
                                             <img src="<?php echo esc_url( get_template_directory_uri()); ?>/img/noimage.png" alt = "Noimage" class = "c-img__item"/>
                                         <?php endif; ?>
                                         <figcaption class = "p-content__inner">
-                                            <div class = "p-content__inner--top c-text--top"><?php echo get_the_title(); ?></div>
-                                            <?php echo the_excerpt(); ?>
+                                            <h3 class = "p-content__inner--top c-text--top"><?php echo get_the_title(); ?></h3>
+                                            <span class = "p-content__inner--small c-text--medium"><?php echo  mb_strimwidth(str_replace( ' ', '</span><p>', get_the_excerpt()), 0, 200, '...', 'UTF-8' ); ?></p>
                                             <div class = "p-content__inner--bottom">
                                                 <div class = "c-text--small-gray c-button">詳しく見る</div>
                                             </div>
