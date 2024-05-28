@@ -113,7 +113,7 @@ pre {
 
 @media screen and (min-width: 429px) and (max-width: 960px){
   .l-header {
-    padding: 40px 144px;
+    padding: 40px clamp(31px, 8.26vw, 144px) 38px clamp(24px , 6.4vw, 144px);
   }
 }
 
