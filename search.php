@@ -28,7 +28,6 @@
                         </p>
                     </section>
                     <section class = "p-content p-group u-gap--sub u-padding--left u-display__column">
-                        <?php query_posts( $query_string.'&posts_per_page = 5' ); ?><!--１ページに表示する投稿数を指定-->
                         <?php if( have_posts() )://投稿データがあるかないかの条件分岐
                         while( have_posts() )://表示する投稿データがあれば繰り返し処理開始
                         the_post(); ?><!--ループ処理に必要なカウント処理等-->
